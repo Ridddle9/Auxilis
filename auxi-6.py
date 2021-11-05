@@ -21,7 +21,7 @@ def start_message(message):
 
 	#Отправляем сообщение с подпиской
 
-	bot.send_message(message.chat.id, text = "Прежде чем начать, подпишитесь, пожалуйста, на канал проекта. Так мы отслеживаем количество пользователей Окси!", reply_markup=check)
+	bot.send_message(message.chat.id, text = "Прежде чем начать, подпишитесь, пожалуйста, на канал проекта - @auxilis_project. Так мы отслеживаем интерес к Окси!", reply_markup=check)
 
 # Проверка подписки 
 @bot.callback_query_handler(func=lambda call: True)
