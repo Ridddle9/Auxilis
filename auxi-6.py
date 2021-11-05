@@ -4,7 +4,7 @@ import time
 
 #токен бота + канал
 bot = telebot.TeleBot("1772121119:AAF_1WwuykNuA7RQvtNUJJ50wIIYII21v28")
-channel = "@plain_law"
+channel = "@auxilis_project"
 
 #Приветственное письмо с просьбой подписаться + кнопка проверки подписки
 @bot.message_handler(commands=['start'])
@@ -21,8 +21,7 @@ def start_message(message):
 
 	#Отправляем сообщение с подпиской
 
-	bot.send_message(message.chat.id, text = "Перед тем как начать, подпишись на канал наших хороших друзей - t.me/plain_law!\
-	Именно благодаря их помощи наш проект может существовать и развиваться!", reply_markup=check)
+	bot.send_message(message.chat.id, text = "Прежде чем начать, подпишитесь, пожалуйста, на канал проекта. Так мы отслеживаем количество пользователей Окси!", reply_markup=check)
 
 # Проверка подписки 
 @bot.callback_query_handler(func=lambda call: True)
